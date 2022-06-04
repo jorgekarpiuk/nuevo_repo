@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    {% if kioscos %}
+
+    <ul>
+        {% for kiosco in kioscos %}
+             <li>Nombre: {{kiosco.nombre}}</li>
+             <li>Precio: {{kiosco.precio}}</li>
+        {% endfor %}  
+    </ul>
+    {% else %}
+        <P>No se encontraron productos</P>
+    {% endif %}  
+
+    
+
+</body>
+</html>

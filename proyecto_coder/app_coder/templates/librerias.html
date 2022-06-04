@@ -1,0 +1,39 @@
+{% extends "padre.html" %}
+
+{% load static %}
+
+
+{% block contenido %}
+     {% for n in librerias %}
+       <P>{{n.producto}}</P>
+     {% endfor %}
+
+     <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">id</th>
+            <th scope="col">Producto</th>
+            <th scope="col">Precio</th>
+            
+          </tr>
+        </thead>
+        <tbody>
+            {% for n in librerias %}
+            <tr>
+                <th scope="row">{{n.id}}</th>
+                <td>{{n.producto}}</td>
+                <td>{{n.precio}}</td>
+                
+            </tr>
+            <P>{{n.producto}}</P>
+            {% endfor %}    
+         
+        </tbody>
+      </table>
+
+
+
+
+
+
+{% endblock %}
